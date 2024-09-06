@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soil Testing lab | CropAdvisor</title>
+
+    <!-- Bootstrap links for styling -->
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+  integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+  crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+  crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+  integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+  crossorigin="anonymous"></script>
+<link rel="stylesheet" href="anantapur.css">
+<!-- Style -->
+<script src="https://kit.fontawesome.com/fe49b5a857.js" crossorigin="anonymous"></script>
+<style>
+  footer {
+        
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 10px;
+        padding-left: 40px;
+        padding-right: 40px;
+        }
+</style>
+</head>
+<body >
+  <!-- Nav bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{{ url_for('index') }}">
+        <div class="navbar-brand">
+          <img src=" {{ url_for('static',filename='Logo.png') }} "; width= "50px" height="50px">
+         </div>
+     </a>
+      <a class="navbar-brand" href="{{ url_for('index') }}">CropAdvisor</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ml-auto">
+          <a class="nav-link active" aria-current="page" href="{{ url_for('index') }}">Home</a>
+          <a class="nav-link" href="{{ url_for('prediction') }}">Prediction</a>
+          <a class="nav-link" href="{{ url_for('seed') }}">Seed Banks</a>
+          <a class="nav-link" href="{{ url_for('agri') }}">Agri Supplies Stores</a>
+          <a class="nav-link" href="{{ url_for('soillab') }}">Soil Testing Labs</a>
+          
+        </div>
+      </div>
+    </div>
+  </nav>
+<!--using clear class to give gap between the upper nav and below container-->
+  <div class="clear"></div>
+  <div class="clear"></div>
+  <div class="clear"></div>
+<!-- main panel will be inside this container-fluid -->
+<div class="conatainer-fluid">
+  <!--row for soil testing lab banner-->
+  <div class="table" red>
+     <h1 style="background-color: green;">
+       Soil Testing Laboratory
+     </h1>
+  </div>
+  <!--div for table -->
+  <div class="table">
+    <div class="table-responsive">
+      <table class="table align-middle">
+
+    <table>
+      <table style="width: 99.1%;" class="tablestyle"> 
+      <table class="table table-striped  table-bordered">
+      <thead>
+        <tr style="text-align: center;">
+          <th scope="col">Sr.No.</th>
+          <th scope="col">State</th>
+          <th scope="col">District</th>
+          <th scope="col">Sub-district/block</th>
+          <th scope="col">Soil Test Lab Name</th>
+          <th scope="col">Address</th>
+        </tr>
+      </thead>
+      <tbody id="ViewArea">
+        <tr>
+          <th scope="row">1</th>
+          <td>Andhra Pradesh</td>
+          <td>Guntur</td>
+          <td>Karempudi / Karempudi</td>
+          <td>	Sk Arif / Mini Lab</td>
+          <td>	Karampudi	</td>
+        </tr>
+
+        <tr>
+          <th scope="row">2</th>
+          <td>Andhra Pradesh</td>
+          <td>Guntur</td>
+          <td>Karempudi / Karempudi</td>
+          <td>Sk. Saida / Mini Lab</td>
+          <td>Karampudi</td>
+        </tr>
+
+        <tr>
+          <th scope="row">3</th>
+          <td>Andhra Pradesh</td>
+          <td>Guntur</td>
+          <td>Nekarikallu / Nekarikallu</td>
+          <td>T.Edukondalu / Mini Lab</td>
+          <td>Nekarikallu</td>
+        </tr>
+
+        <tr>
+          <th scope="row">4</th>
+          <td>Andhra Pradesh</td>
+          <td>Guntur</td>
+          <td>Nekarikallu / Nekarikallu</td>
+          <td>D. Venkatramaiah / Mini Lab</td>
+          <td>Nekarikallu</td>
+        </tr>
+
+        <tr>
+          <th scope="row">5</th>
+          <td>Andhra Pradesh</td>
+          <td>Guntur</td>
+          <td>Vinukonda / Vinukonda</td>
+          <td>S.Ramaswamy / Mini Lab</td>
+          <td>Vinukonda</td>
+        </tr>
+
+        <tr>
+          <th scope="row">6</th>
+          <td>Andhra Pradesh</td>
+          <td>Guntur</td>
+          <td>Vinukonda/Vinukonda</td>
+          <td>P.Ashok / Mini Lab</td>
+          <td>Vinukonda</td>
+        </tr>
+
+        <tr>
+          <th scope="row">7</th>
+          <td>Andhra Pradesh</td>
+          <td>Guntur</td>
+          <td>Ipur / Ipur</td>
+          <td>P.Ashoka / Mini Lab</td>
+          <td>Ipur</td>
+        </tr>
+
+        <tr>
+          <th scope="row">8</th>
+          <td>Andhra Pradesh</td>
+          <td>Guntur</td>
+          <td>Ipur / Ipur</td>
+          <td>K.Suneetha / Mini Lab</td>
+          <td>Ipur</td>
+        </tr>
+
+        <tr>
+          <th scope="row">9</th>
+          <td>Andhra Pradesh</td>
+          <td>Guntur</td>
+          <td>Bollapalle / Bollapalle</td>
+          <td>R.Mallikarjuna / Mini Lab</td>
+          <td>Bollapalli</td>
+        </tr>
+
+        <tr>
+          <th scope="row">10</th>
+          <td>Andhra Pradesh</td>
+          <td>Guntur</td>
+          <td>Bollapalle / Bollapalle</td>
+          <td>G.Sivajyothi / Mini Lab</td>
+          <td>Bollapalli</td>
+        </tr>
+        </tbody>
+        </table>
+    </table>
+    </table>
+    </table>
+    </div>
+  </div>   
+</div>
+<footer style="background-color: #fff;">
+  <div style="display: flex; flex-direction: row; flex-wrap: nowrap; align-content: center; justify-content: space-between; align-items: baseline">
+    <div>
+      <p><b>&copy; All rights reserved.</b></p>
+    </div>
+    <div>
+      <span style="font-size: 16px; font-weight: bold;">
+        Follow us </span> &nbsp;
+        
+        <a href="#" style="font-size: 25px; margin: 0; padding: 0; color: #616161;">
+          <i class="fab fa-github"></i>
+        </a> &nbsp;
+        
+    </div>
+  </div>
+  </footer>
+</body>
+</html>
+
+ 

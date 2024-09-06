@@ -1,0 +1,46 @@
+Steps needed to be followed for Execution 
+
+A)With respect to Developer
+
+Step1: Create a new environment 
+
+Step2: Go to source code file ,locate requirement.txt and install all the packages that are in requirement.txt in the 
+       newly created environment.  
+
+Step3:Copy the source code into the newly created environment 
+
+Step$: Open the source code using any IDE(preferable VS Code)
+
+Step4: Go to app.py file and run it 
+
+Step5: Go to webpage and enter the local server url where the project is running                               
+                                  
+                                  
+B)With respect to client for using the project 
+
+Step1: Go to the url where the project is running 
+
+Step2: Enter the City and Country name of which you want to get weather information  
+
+Step3: Press Get Weather button to get weather information about location you have entered 
+
+Step4: Click on  Prediction in the navigation bar which will redirect to new prediction page where input fields are available to enter
+       the soil and weather parameters
+
+Step5: Enter weather parameter that was obtained using weather api and enter other soil parameters based on historical datas  
+
+Step6: Press Predict button to predict the crop 
+
+Step7: A new page opens up which gives the predicted result and a link named "Learn more" to know more about the predicted crop 
+
+Step8: CLick on the link "learn more" if you would like to know more about the predicted crop.
+
+Step9: Click on Soil Testing labs in the navigation bar if you like to know the locations and other information of 
+       soil testing labs available in andhra pradesh so that the you can get information about soil parameters present
+       in the soil for prediction purpose.
+ 
+Step10: Click on Seed Bank  in the navigation bar if you would like to know the locations and other information of different
+       seed banks available in andhra pradesh 
+
+Step11: Click on Agri Supplies Stores in the navigation bar if you like to know the locations and other informations of different
+       agriculture supplier stores available in andhra pradesh    

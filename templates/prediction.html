@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prediction Page</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <!-- Style -->
+  <script src="https://kit.fontawesome.com/fe49b5a857.js" crossorigin="anonymous"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Create two equal columns that floats next to each other */
+    .column1 {
+      float: left;
+      width: 50%;
+      padding-left: 20px;
+      height: 550px;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100px;
+      padding-top: 20px;
+      padding-bottom: 10px;
+      padding-left: 40px;
+      padding-right: 40px;
+      background-color: burlywood;
+
+    }
+
+    form input {
+      width: 180px;
+    }
+
+    label {
+      width: 150px;
+      display: inline-block;
+      font-weight: bolder;
+    }
+
+    h1 {
+      font-family: 'Amatica SC', cursive;
+      font-weight: 700;
+      text-align: center;
+      text-decoration-color: coral;
+    }
+    table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th{
+  padding: 5px;
+  text-align: center;    
+}
+td{
+  padding: 5px;
+  text-align: left;    
+}
+  </style>
+</head>
+
+<body style="background-image: url({{url_for('static',filename='predict.jpg')}});
+background-size: cover;">
+  <div class="wrapper">
+    <!-- Nav bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="{{ url_for('index') }}">
+          <div class="navbar-brand">
+            <img src=" {{ url_for('static',filename='Logo.png') }} " width="50px" height="50px">
+          </div>
+        </a>
+        <a class="navbar-brand" href="{{ url_for('index') }}">CropAdvisor</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ml-auto">
+            <a class="nav-link" href="{{ url_for('index') }}">Home</a>
+            <a class="nav-link active" aria-current="page" href="{{ url_for('prediction') }}">Prediction</a>
+            <a class="nav-link" href="{{ url_for('seed') }}">Seed Banks</a>
+            <a class="nav-link" href="{{ url_for('agri') }}">Agri Supplies Stores</a>
+            <a class="nav-link" href="{{ url_for('soillab') }}">Soil Testing Labs</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <h1>Enter the following data to predict the suitable crop</h1>
+
+    <div class="row">
+      <div class="column1">
+        <form method="POST" , action="{{url_for('predict')}}">
+          <br><label>Nitrogen</label>
+          <input type="number" , step="0.01" , name='a' min='0' max='1000' required>&nbsp;&nbsp;<label>ratio in
+            soil</label> <br><br>
+          <label>Phosphorus</label>
+          <input type="number" , step="0.01" , name='b' min='0' max='1000' required>&nbsp;&nbsp;<label>ratio in
+            soil</label><br><br>
+          <label>Potassium</label>
+          <input type="number" , step="0.01" , name='c' min='0' max='1000' required>&nbsp;&nbsp;<label>ratio in
+            soil</label><br><br>
+          <label>Temperature</label>
+          <input type="number" , step="0.01" , name='d' min='0' max='100' required>&nbsp;&nbsp;<label>°c</label><br><br>
+          <label>Humidity</label>
+          <input type="number" , step="0.01" , name='e' min='0' max='100' required>&nbsp;&nbsp;<label>%</label><br><br>
+          <label>Ph</label>
+          <input type="number" , step="1" , name='f' min='0' max='14' required> <br><br>
+          <label>Rainfall</label>
+          <input type="number" , step="0.01" , name='g' min='0' max='1000'
+            required>&nbsp;&nbsp;<label>mm</label><br><br>
+
+          <button onclick="status()" type="submit" class="btn btn-primary">Predict</button>
+
+        </form>
+      </div>
+      
+    </div>
+    <footer class="footer">
+      <div
+        style="display: flex; flex-direction: row; flex-wrap: nowrap; align-content: center; justify-content: space-between; align-items: baseline">
+        <div>
+          <p><b>&copy; All rights reserved.</b></p>
+        </div>
+        <div>
+          <span style="font-size: 16px; font-weight: bold;">
+            Follow us </span> &nbsp;
+
+          <a href="#" style="font-size: 25px; margin: 0; padding: 0; color: #616161;">
+            <i class="fab fa-github"></i>
+          </a>
+
+        </div>
+      </div>
+    </footer>
+  </div>
+
+</body>
+
+</html>

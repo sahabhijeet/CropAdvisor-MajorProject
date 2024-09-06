@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CropAdvisor</title>
+
+  <!-- Bootstrap links for styling -->
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+
+  <!-- Style -->
+  <script src="https://kit.fontawesome.com/fe49b5a857.js" crossorigin="anonymous"></script>
+
+  <style>
+    body {
+      margin: 0;
+    }
+
+    h1,
+    h2 {
+      font-family: 'Amatica SC', cursive;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    p {
+      font-family: 'Open Sans Condensed', sans-serif;
+    }
+
+    .container div {
+      padding: 1%;
+      box-sizing: border-box;
+    }
+
+    .footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100px;
+      padding-top: 20px;
+      padding-bottom: 10px;
+      padding-left: 40px;
+      padding-right: 40px;
+      background-color: burlywood;
+    }
+
+    .column1 {
+      float: left;
+      width: 50%;
+      padding-left: 20px;
+      height: 620px;
+    }
+
+    .column2 {
+      float: right;
+      width: 50%;
+      padding: 20px;
+      height: 620px;
+    }
+  </style>
+</head>
+
+<body
+  style="background-image:url({{url_for('static',filename='wheat.jpg')}});background-attachment:fixed; background-repeat:no-no-repeat; background-size:cover;">
+  <!-- Nav bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{{ url_for('index') }}">
+        <div class="navbar-brand">
+          <img src=" {{ url_for('static',filename='Logo.png') }} " ; width="50px" height="50px">
+        </div>
+      </a>
+      <a class="navbar-brand" href="{{ url_for('index') }}">CropAdvisor</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ml-auto">
+          <a class="nav-link active" aria-current="page" href="{{ url_for('index') }}">Home</a>
+          <a class="nav-link" href="{{ url_for('prediction') }}">Prediction</a>
+          <a class="nav-link" href="{{ url_for('seed') }}">Seed Banks</a>
+          <a class="nav-link" href="{{ url_for('agri') }}">Agri Supplies Stores</a>
+          <a class="nav-link" href="{{ url_for('soillab') }}">Soil Testing Labs</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="row">
+    <div class="column1"><br>
+      <div class="container h-100">
+        <div class="row justify-content-center">
+          <div class="col-md-6 col-sm-12 col-xs-12 pt-5">
+            <form method="POST" class="card border-0 p-3 shadow-sm">
+              <div class="form-group">
+                <input type="text" class="form-control" name="city" placeholder="Enter City" required>
+              </div>
+
+              <div class="form-group">
+                <input type="text" class="form-control" name="country" placeholder="Enter Country" required>
+              </div>
+
+              <div class="form-group">
+                <button class="btn btn-primary">Get Weather</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="column2">
+      <div class="container h-100">
+        <div class="row justify-content-center">
+          <div class="col-md-6 col-sm-12 col-xs-12 pt-5">
+            <div class="card border-0 p-3 shadow-sm text-center">
+              <h3 class="text-muted">Current Weather For {{ city }}</h3>
+              <h5 class="lead text-muted">Temperature: {{ temp }} °C</h5>
+              <h5 class="lead text-muted">Humidity: {{ humidity }}%</h5>
+              <h5 class="lead text-muted">Wind Speed: {{ wind_speed }} mps</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <footer class="footer">
+      <div
+        style="display: flex; flex-direction: row; flex-wrap: nowrap; align-content: center; justify-content: space-between; align-items: baseline">
+        <div>
+          <p><b>&copy; All rights reserved.</b></p>
+        </div>
+        <div>
+          <span style="font-size: 16px; font-weight: bold;">
+            Follow us </span> &nbsp;
+
+          <a href="#" style="font-size: 25px; margin: 0; padding: 0; color: #616161;">
+            <i class="fab fa-github"></i>
+          </a>
+
+        </div>
+      </div>
+    </footer>
+
+</body>
+
+</html>

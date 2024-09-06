@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agro Store Info. | CropAdvisor</title>
+  </title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <!-- Style -->
+  <script src="https://kit.fontawesome.com/fe49b5a857.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      background-color: darkseagreen;
+    }
+    footer {
+
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      padding-top: 20px;
+      padding-bottom: 10px;
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Nav bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{{ url_for('index') }}">
+        <div class="navbar-brand">
+          <img src=" {{ url_for('static',filename='Logo.png') }} " ; width="50px" height="50px">
+        </div>
+      </a>
+      <a class="navbar-brand" href="{{ url_for('index') }}">CropAdvisor</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ml-auto">
+          <a class="nav-link " href="{{ url_for('index') }}">Home</a>
+          <a class="nav-link" href="{{ url_for('prediction') }}">Prediction</a>
+          <a class="nav-link" href="{{ url_for('seed') }}">Seed Banks</a>
+          <a class="nav-link active" aria-current="page" href="{{ url_for('agri') }}">Agri Supplies Stores</a>
+          <a class="nav-link" href="{{ url_for('soillab') }}">Soil Testing Labs</a>
+
+        </div>
+      </div>
+    </div>
+  </nav>
+  <br>
+  <div class="container">
+    <div class="card-deck">
+      <div class="card" style="width:400px">
+        <div class="card-body">
+          <p class="card-title"><strong>AMRUTHA AGENCIES</strong></p>
+          <strong>Hours:</strong> 9:00AM-8:00PM<br>
+          <strong>Phone:</strong> +91-8592 233821<br><br>
+          <a href="https://g.co/kgs/UYM34r" class="btn btn-primary">Get Location</a>
+        </div>
+      </div>
+      <div class="card" style="width:400px">
+        <div class="card-body">
+          <p class="card-title"><strong>Zuari Agro Chemicals Ltd</strong></p>
+          <strong>Hours:</strong> 9:00AM-8:00PM<br>
+          <strong>Phone:</strong> +91-9963322426<br><br>
+          <a href="https://g.co/kgs/aP5VaZ" class="btn btn-primary">Get Location</a>
+        </div>
+      </div>
+      <div class="card" style="width:400px">
+        <div class="card-body">
+          <p class="card-title"><strong>NAVAYUGA AGENCIES</strong></p>
+          <strong>Hours:</strong> 9:00AM-8:00PM<br>
+          <strong>Phone:</strong> +919885954069<br><br>
+          <a href="https://g.co/kgs/GcZY4y" class="btn btn-primary">Get Location</a>
+        </div>
+      </div>
+      <div class="card" style="width:400px">
+        <div class="card-body">
+          <p class="card-title"><strong>R RAJESWARI AGENCIES</strong></p>
+          <strong>Hours:</strong> 9:00AM-8:30PM<br>
+          <strong>Phone:</strong> +919849695118<br><br>
+          <a href="#" class="btn btn-primary">Get Location</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><br>
+  <div class="container">
+    <div class="card-deck">
+      <div class="card" style="width:400px">
+        <div class="card-body">
+          <p class="card-title"><strong>SAI KRUPA TRADERS</strong></p>
+          <strong>Hours:</strong> 9:00AM-9:00PM<br>
+          <strong>Phone:</strong> NA<br><br>
+          <a href="#" class="btn btn-primary">Get Location</a>
+        </div>
+      </div>
+    <div class="card" style="width:400px">
+      <div class="card-body">
+        <p class="card-title"><strong>SHIVANI FERTILISERS</strong></p>
+        <strong>Hours:</strong> 8:30AM-8:30PM<br>
+        <strong>Phone:</strong> +919440995838<br><br>
+        <a href="#" class="btn btn-primary">Get Location</a>
+      </div>
+    </div>
+    <div class="card" style="width:400px">
+      <div class="card-body">
+        <p class="card-title"><strong>SRI S SAI FERTILIZERS</strong></p>
+        <strong>Hours:</strong> 9:00AM-9:00PM<br>
+        <strong>Phone:</strong> NA<br><br>
+        <a href="#" class="btn btn-primary">Get Location</a>
+      </div>
+    </div>
+    <div class="card" style="width:400px">
+      <div class="card-body">
+        <p class="card-title"><strong>SRI SAI MEHAR DEPOT</strong></p>
+        <strong>Hours:</strong> 9:00AM-9:00PM<br>
+        <strong>Phone:</strong> +919490045589<br><br>
+        <a href="#" class="btn btn-primary">Get Location</a>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div><br><br>
+  <div class="container">
+    <div class="card-deck">
+      <div class="card" style="width:400px">
+        <div class="card-body">
+          <p class="card-title"><strong>Kapilehswor Fertilizers</strong></p>
+          <strong>Hours:</strong> 9:00AM-8:00PM<br>
+          <strong>Phone:</strong> +918646272410<br><br>
+          <a href="#" class="btn btn-primary">Get Location</a>
+        </div>
+      </div>
+      <div class="card" style="width:400px">
+        <div class="card-body">
+          <p class="card-title"><strong>Venkata Krishna Seeds</strong></p>
+          <strong>Hours:</strong> 9:00AM-8:00PM<br>
+          <strong>Phone:</strong> +9198854 33948<br><br>
+          <a href="#" class="btn btn-primary">Get Location</a>
+        </div>
+      </div>
+      <div class="card" style="width:400px">
+        <div class="card-body">
+          <p class="card-title"><strong>John Doe</strong></p>
+          <strong>Hours:</strong> 9:00AM-8:00PM<br>
+          <strong>Phone:</strong> +9198854 33948<br><br>
+          <a href="#" class="btn btn-primary">Get Location</a>
+        </div>
+      </div>
+      <div class="card" style="width:400px">
+        <div class="card-body">
+          <p class="card-title"><strong>John Doe</strong></p>
+          <strong>Hours:</strong> 9:00AM-8:00PM<br>
+          <strong>Phone:</strong> +9198854 33948<br><br>
+          <a href="#" class="btn btn-primary">Get Location</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div><br>
+  <footer style="background-color: #fff;">
+    <div
+      style="display: flex; flex-direction: row; flex-wrap: nowrap; align-content: center; justify-content: space-between; align-items: baseline">
+      <div>
+        <p><b>&copy; All rights reserved.</b></p>
+      </div>
+      <div>
+        <span style="font-size: 16px; font-weight: bold;">
+          Follow us </span> &nbsp;
+
+        <a href="#" style="font-size: 25px; margin: 0; padding: 0; color: #616161;">
+          <i class="fab fa-github"></i>
+        </a> &nbsp;
+
+      </div>
+    </div>
+  </footer>
+
+
+
+</body>
+
+</html>

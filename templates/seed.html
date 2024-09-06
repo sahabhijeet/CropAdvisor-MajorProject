@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information about seed bank | CropAdvisor</title>
+
+<!-- Bootstrap links for styling -->
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+crossorigin="anonymous"></script>
+<!-- Style -->
+<script src="https://kit.fontawesome.com/fe49b5a857.js" crossorigin="anonymous"></script>
+<style>
+  footer {
+        
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 10px;
+        padding-left: 40px;
+        padding-right: 40px;
+        }
+</style>
+
+<!--accordion stylesheet link-->
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+ rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+  crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+   
+
+  <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+ integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+  crossorigin="anonymous"></script>
+
+
+
+
+
+</head>
+
+  <!-- Nav bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{{ url_for('index') }}">
+        <div class="navbar-brand">
+          <img src=" {{ url_for('static',filename='Logo.png') }} "; width= "50px" height="50px">
+         </div>
+     </a>
+      <a class="navbar-brand" href="{{ url_for('index') }}">CropAdvisor</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ml-auto">
+          <a class="nav-link active" aria-current="page" href="{{ url_for('index') }}">Home</a>
+          <a class="nav-link" href="{{ url_for('prediction') }}">Prediction</a>
+          <a class="nav-link active" aria-current="page" href="{{ url_for('seed') }}">Seed Banks</a>
+          <a class="nav-link" href="{{ url_for('agri') }}">Agri Supplies Stores</a>
+          <a class="nav-link" href="{{ url_for('soillab') }}">Soil Testing Labs</a>
+          
+        </div>
+      </div>
+    </div>
+  </nav>
+
+<br>
+<br>
+<br>
+
+
+<!--accordion for seedbanks -->
+
+<div class="container">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" 
+      data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+        <Bold>Brief on India's Seed Bank Origination</Bold>
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+      <div class="accordion-body">
+      <strong>Indian Seed Vault</strong> is a secure seed bank lies in a high-altitude mountain pass on the<strong> Chang La seed vault
+        in Ladakh, India.</strong> It was built in <strong>2010</strong> jointly by the <strong> Defence Institute of High Altitude Research and
+        the National Bureau of Plant Genetic Resources </strong>, this seed bank is the second largest in the world.
+      <strong>The BBA (Beej Bachao Andolan — Save the Seeds movement)</strong> began in the late <strong> 1980s  in Uttarakhand, India </strong>, led
+        by <strong> Vijay Jardhari </strong>. Seed banks were created to store native varieties of seeds.It stores over <strong>10,000 seeds</strong>
+        accessions and <strong>200 plant species</strong>.These seeds include apricots, barley, cabbage, carrots, radish,
+        potatoes, tomatoes, rice, wheat, etc., based on qualities such yield or resistance to temperature,
+        pests and humidity.
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" 
+      data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+        SEEDBANK-1
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse show" 
+    aria-labelledby="panelsStayOpen-headingTwo">
+      <div class="accordion-body">
+        <strong>SEEDBANK NAME </strong>:Maturi Apparao Seeds(Agricultural Seed Store) <br>
+        <strong>Hours</strong>: 9AM-8PM<br>
+        <strong>Phone </strong>: 062819 20772<br>
+        <strong>Address</strong>: D.NO, 33-1-2, Town Hall Rd, Beside State Bank,
+                                  Mangalavaripeta, Rajahmundry, Andhra Pradesh <br>
+        <strong>Pincode</strong>:533101
+
+      </div>
+    </div>
+  </div>
+
+
+  
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" 
+      data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+        SEEDBANK-2
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse show" 
+    aria-labelledby="panelsStayOpen-headingThree">
+      <div class="accordion-body">
+        <strong>SEEDBANK NAME </strong>:Gandhi Seettayya Seeds<br>
+        <strong>Hours</strong>: 9AM-8PM<br>
+        <strong>Phone </strong>: 098489 38309<br>
+        <strong>Address</strong>: #14, Ratna Complex , Rashtrapathi Road,
+                 Opp Polytechnic College, Tanuku, Andhra Pradesh <br>
+        <strong>Pincode</strong>:534211
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" 
+      data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+        SEEDBANK-3
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse show" 
+    aria-labelledby="panelsStayOpen-headingFour">
+      <div class="accordion-body">
+        <strong>SEEDBANK NAME </strong>:Bank of seeds<br>
+        <strong>Hours</strong>: 9AM-8PM<br>
+        <strong>Phone </strong>: 094408 26179<br>
+        <strong>Address</strong>:6/336 ,Railway station Road,, Rajampet<br>
+        <strong>Pincode</strong>:516115<br>
+
+      </div>
+    </div>
+  </div>
+
+
+  
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingFive">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" 
+      data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
+        SEEDBANK-4
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse show" 
+    aria-labelledby="panelsStayOpen-headingFive">
+      <div class="accordion-body">
+        <strong>SEEDBANK NAME </strong>:Annadatha Seeds <br>
+        <strong>Hours</strong>: 9AM-8;30 PM<br>
+        <strong>Phone </strong>: 098855 97266<br>
+        <strong>Address</strong>:# Opp. Andhra Bank, China Gandhi Bomma Centre, Nuzivedu<br>
+        <strong>Pincode</strong>: 521201<br>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingSix">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" 
+      data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false" aria-controls="panelsStayOpen-collapseSix">
+        SEEDBANK-5
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse show" 
+    aria-labelledby="panelsStayOpen-headingSix">
+      <div class="accordion-body">
+        <strong>SEEDBANK NAME </strong>:Sri Venkateswara seeds<br>
+        <strong>Hours</strong>: 9AM-9PM<br>
+        <strong>Phone </strong>: NA<br>
+        <strong>Address</strong>:Beside axis bank atm Sri rama lodge,
+                                Ravulapalem, Andhra Pradesh<br> 
+        <strong>Pincode</strong>:533238<br>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingSeven">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" 
+      data-bs-target="#panelsStayOpen-collapseSeven" aria-expanded="false" aria-controls="panelsStayOpen-collapseSeven">
+        SEEDBANK-6
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseSeven" class="accordion-collapse collapse show" 
+    aria-labelledby="panelsStayOpen-headingSeven">
+      <div class="accordion-body">
+        <strong>SEEDBANK NAME </strong>:Satya Seeds <br>
+        <strong>Hours</strong>: 8:30AM-8:30PM<br>
+        <strong>Phone </strong>:094907 20009 <br>
+        <strong>Address</strong>: #1-9,State Bank Center,Vijayawada Road,Kankipadu, Vijayawada, Andhra Pradesh<br>
+        <strong>Pincode</strong>: 521151 <br>
+
+      </div>
+    </div>
+  </div>
+
+
+  
+  
+  
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingEight">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" 
+      data-bs-target="#panelsStayOpen-collapseEight" aria-expanded="false" aria-controls="panelsStayOpen-collapseEight">
+        SEEDBANK-7
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseEight" class="accordion-collapse collapse show" 
+    aria-labelledby="panelsStayOpen-headingEight">
+      <div class="accordion-body">
+        <strong>SEEDBANK NAME </strong>:Yeruvaka Seeds<br>
+        <strong>Hours</strong>: 9AM-9PM<br>
+        <strong>Phone </strong>: NA <br>
+        <strong>Address</strong>:Andhra Bank, opp. Piduguralla, Piduguralla, Andhra Pradesh <br>
+        <strong>Pincode</strong>:522413<br>
+
+      </div>
+    </div>
+  </div>
+  
+  
+  
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingNine">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" 
+      data-bs-target="#panelsStayOpen-collapseNine" aria-expanded="false" aria-controls="panelsStayOpen-collapseNine">
+        SEEDBANK-8
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseNine" class="accordion-collapse collapse show" 
+    aria-labelledby="panelsStayOpen-headingNine">
+      <div class="accordion-body">
+        <strong>SEEDBANK NAME </strong>:PADMA SEEDS<br>
+        <strong>Hours</strong>: 9AM-9PM<br>
+        <strong>Phone </strong>: 086492 53540<br>
+        <strong>Address</strong>: DOOR NO 1-117/1 BESIDE HDFC BANK, MAIN ROAD, Piduguralla, Andhra Pradesh<br>
+        <strong>Pincode</strong>: 522413<br>
+
+      </div>
+    </div>
+  </div>
+  
+  
+  
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingTen">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" 
+      data-bs-target="#panelsStayOpen-collapseTen" aria-expanded="false" aria-controls="panelsStayOpen-collapseTen">
+        SEEDBANK-9
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseTen" class="accordion-collapse collapse show" 
+    aria-labelledby="panelsStayOpen-headingTen">
+      <div class="accordion-body">
+        <strong>SEEDBANK NAME </strong>:Nuziveedu Seeds Limited, Vijayarai <br>
+        <strong>Hours</strong>: 9AM-8PM<br>
+        <strong>Phone </strong>: 097202 83990<br>
+        <strong>Address</strong>:Chintalapudi - Eluru Rd, Muthanaveedu, Andhra Pradesh<br> 
+        <strong>Pincode</strong>:534475<br>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingEleven">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" 
+      data-bs-target="#panelsStayOpen-collapseEleven" aria-expanded="false" aria-controls="panelsStayOpen-collapseEleven">
+        SEEDBANK-10
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseEleven" class="accordion-collapse collapse show" 
+    aria-labelledby="panelsStayOpen-headingEleven">
+      <div class="accordion-body">
+        <strong>SEEDBANK NAME </strong>: Venkata Krishna Seeds<br>
+        <strong>Hours</strong>: 9AM-8PM<br>
+        <strong>Phone </strong>: 098854 33948<br>
+        <strong>Address</strong>:near syndycate bank, Vissannapetaa, Andhra Pradesh <br>
+        <strong>Pincode</strong>:521215<br>
+
+      </div>
+    </div>
+  </div>
+
+
+  
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingTwelve">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" 
+      data-bs-target="#panelsStayOpen-collapseTwelve" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwelve">
+        SEEDBANK-11
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseTwelve" class="accordion-collapse collapse show" 
+    aria-labelledby="panelsStayOpen-headingTwelve">
+      <div class="accordion-body">
+        <strong>SEEDBANK NAME </strong>:A P Seeds<br>
+        <strong>Hours</strong>: 10:30AM-6PM<br>
+        <strong>Phone </strong>: 0861 232 8692<br>
+        <strong>Address</strong>: 25-10-40, Grand Trunk Road, Chandra Mouli Nagar, Postal Colony,
+         Vedayapalem, Nellore, Andhra Pradesh <br>
+        <strong>Pincode</strong>:524004<br>
+
+      </div>
+    </div>
+  </div>
+
+  
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingThirteen">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" 
+      data-bs-target="#panelsStayOpen-collapseThirteen" aria-expanded="false" aria-controls="panelsStayOpen-collapseThirteen">
+        SEEDBANK-12
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseThirteen" class="accordion-collapse collapse show" 
+    aria-labelledby="panelsStayOpen-headingThirteen">
+      <div class="accordion-body">
+        <strong>SEEDBANK NAME </strong>: Karshak Seeds<br>
+        <strong>Hours</strong>: 9AM-8PM<br>
+        <strong>Phone </strong>: 0866 257 2533<br>
+        <strong>Address</strong>:28-8-12, D G Street, Arundelpet, Arundelpet, Vijayawada, Andhra Pradesh <br>
+        <strong>Pincode</strong>:520002<br>
+
+      </div>
+    </div>
+  </div>
+
+  
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingFourteen">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" 
+      data-bs-target="#panelsStayOpen-collapseFourteen" aria-expanded="false" aria-controls="panelsStayOpen-collapseFourteen">
+        SEEDBANK-13
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseFourteen" class="accordion-collapse collapse show" 
+    aria-labelledby="panelsStayOpen-headingFourteen">
+      <div class="accordion-body">
+        <strong>SEEDBANK NAME </strong>:Sri Manasa Seeds & Mulching Sheets<br>
+        <strong>Hours</strong>: 9AM-8PM<br>
+        <strong>Phone </strong>: 077022 06674 <br>
+        <strong>Address</strong>:Shop No:4, Sreenivasa Complex, Circle, 
+        Rudrampeta Rd, opp. : Vijaya Bank, Ram Nagar, Anantapur, Andhra Pradesh <br>
+        <strong>Pincode</strong>:515001<br>
+
+      </div>
+    </div>
+  </div>
+
+ 
+ </div>
+</div>
+
+<footer style="background-color: #fff;">
+  <div style="display: flex; flex-direction: row; flex-wrap: nowrap; align-content: center; justify-content: space-between; align-items: baseline">
+    <div>
+      <p><b>&copy; All rights reserved.</b></p>
+    </div>
+    <div>
+      <span style="font-size: 16px; font-weight: bold;">
+        Follow us </span> &nbsp;
+        
+        <a href="#" style="font-size: 25px; margin: 0; padding: 0; color: #616161;">
+          <i class="fab fa-github"></i>
+        </a> &nbsp;
+        
+    </div>
+  </div>
+  </footer>
+
+
+</body>
+
+</html>
